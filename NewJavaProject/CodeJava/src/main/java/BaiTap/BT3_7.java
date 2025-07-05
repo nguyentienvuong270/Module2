@@ -67,7 +67,6 @@ public class BT3_7 {
         // Toàn Tử:
 
         /*
-
         Scanner inputnumber = new Scanner(System.in);
         System.out.print("Nhập số a: ");
         int a = inputnumber.nextInt();

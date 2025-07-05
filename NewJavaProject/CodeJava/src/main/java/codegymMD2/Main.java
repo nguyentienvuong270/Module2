@@ -1,4 +1,4 @@
-package org.example;
+package codegymMD2;
 
 import java.util.Scanner;
 
