@@ -2,7 +2,7 @@ package codegymMD2;
 
 import java.util.Scanner;
 
-public class CauDK {
+public class CDK {
     public static void main(String[] args) {
         // Cấu trúc điều kiện: Chuỗi câu ệnh cho phép chương trình quyết định thực hiện đoạn mã
       /*

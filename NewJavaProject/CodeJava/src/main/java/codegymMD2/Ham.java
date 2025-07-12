@@ -2,7 +2,7 @@ package codegymMD2;
 
 import java.util.Scanner;
 
-public class Main {
+public class Ham {
     // Gõ nhanh hàm main: psvm or main + Tab
     public static void main(String[] args) {
         // Code in here
