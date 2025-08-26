@@ -1,4 +1,4 @@
-package BaiTap.Access;
+package BaiTap.Access.BT;
 
 public class Main {
     public static void main(String[] args) {
