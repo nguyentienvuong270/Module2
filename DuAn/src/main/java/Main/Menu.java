@@ -1,4 +1,7 @@
-package org.example;
+package Service;
+
+import Model.SanPham;
+import Model.XuatHang;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -19,9 +22,10 @@ public class Menu {
             System.out.println("4. Sua thong tin san pham");
             System.out.println("5. Xoa san pham");
             System.out.println("6. Nhap them san pham");
-            System.out.println("7. Xuat san pham");
+            System.out.println("7. Mua san pham");
             System.out.println("8. Hien thi doan thu");
-            System.out.println("9. Thoat");
+            System.out.println("9. Canh bao san pham sap het hang");
+            System.out.println("10. Thoat");
             System.out.print("Chon yeu cau cua ban: ");
 
             int chon = sc.nextInt();
@@ -33,10 +37,11 @@ public class Menu {
                 case 3: timKiemSanPham(); break;
                 case 4: suaSanPham(); break;
                 case 5: xoaSanPham(); break;
-                case 6: nhapKho(); break;
-                case 7: xuatKho(); break;
+                case 6: nhap(); break;
+                case 7: mua(); break;
                 case 8: hienThiDoanhThu(); break;
-                case 9:
+                case 9: canhBaoHetsp(); break;
+                case 10:
                     System.out.println("Da thoat chuong trinh");
                     return;
                 default:
@@ -63,7 +68,7 @@ public class Menu {
                 }
                 break;
             } catch (NumberFormatException e) {
-                System.out.println("Nhap gia thanh cong.");
+                System.out.println("Gia khong hop le, vui long nhap lai.");
             }
         }
 
@@ -98,7 +103,7 @@ public class Menu {
         }
     }
 
-    public static void nhapKho() {
+    public static void nhap() {
         System.out.print("Nhap ma san pham: ");
         int ma = sc.nextInt();
         sc.nextLine();
@@ -115,7 +120,7 @@ public class Menu {
         System.out.println("Khong co san pham nay:");
     }
 
-    public static void xuatKho() {
+    public static void mua() {
         System.out.print("Nhap ma san pham:");
         int ma = sc.nextInt();
         sc.nextLine();
@@ -219,5 +224,19 @@ public class Menu {
             tong += xh.getThanhTien();
         }
         System.out.printf(">>> Tong doanh thu: \n" + tong + "$");
+    }
+
+    public static void canhBaoHetsp() {
+        System.out.println("\n--- San pham sap het hang ---");
+        boolean coSP = false;
+        for (SanPham sp : dsSanPham) {
+            if (sp.getSoLuong() < 5) {
+                System.out.println(sp);
+                coSP = true;
+            }
+        }
+        if (!coSP) {
+            System.out.println("Tat ca san pham deu du so luong.");
+        }
     }
 }
